@@ -442,12 +442,13 @@ background: var(--green); color: #ffff;
 
 
  
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 450px) {
     html{
         font-size: 55%;
 
     }
 
+    
     header{
         padding: 1rem 2rem;
     }
@@ -458,10 +459,13 @@ background: var(--green); color: #ffff;
 
     .dishes .box-container .box img{
         height:auto;
-        /* margin:100%; */
         width: 100%;
         
-     }    
+     }  
+     .order form .inputBox .input{
+        width: 100%;
+    }
+       
     
      .about .row{
         display: flex;
@@ -530,7 +534,7 @@ color: var(--green);
 }
 
 .order form{
-    width:90rem;
+    max-width:90rem;
     border-radius: .5rem;
     box-shadow:var(--box-shadow);
     border:.1rem solid rgba(0,0,0,.2);
@@ -564,12 +568,22 @@ color: var(--green);
     width:100%;
 
 }
+.order form .inputBox .input input:focus,
+.order form .inputBox .input textarea:focus{
+    border: .1rem solid var(--green);
+}
+
 .order form .inputBox .input textarea{
     height:20rem;
     resize: none;
 }
+.order form .btn{
+    margin-top: 0;
 
-
+}
+/* .order form .inputBox .input{
+    width:100%;
+} */
 
 
 
@@ -596,6 +610,9 @@ color: var(--green);
         display: inline-block;
     
     }   
+    .order form .inputBox .input{
+        width:100%;
+    }
 
     header .navbar{
         position: absolute;
